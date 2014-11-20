@@ -11,7 +11,7 @@ You need only docker to be installed.
 
 Create simple alias
 ```
-alias coursera-dl='docker run --rm -v /tmp/coursera:/downloads coursera/coursera-dl'
+alias coursera-dl='docker run --rm -v /tmp/coursera:/downloads mshytikov/coursera-dl-docker'
 ```
 
 Run your coursera-dl (without --path argument):

@@ -26,9 +26,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision "docker" do |d|
     # Uncomment if you want build image from Dockerfile
-    #d.build_image "/vagrant", args: "-t coursera/coursera-dl"
+    # d.build_image "/vagrant", args: "-t mshytikov/coursera-dl-docker"
 
-    d.run "coursera/coursera-dl",
+    d.run "mshytikov/coursera-dl-docker",
       args:"-v /vagrant:/downloads",
       cmd: '-u YOUR_COURSERA_EMAIL -p PASSWORD hwswinterface-002'
   end
