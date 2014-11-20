@@ -5,10 +5,9 @@
 # https://github.com/mshytikov/coursera-dl-docker.git
 #
 
-MAINTAINER mshytikov
-
 # Pull base image
 FROM ubuntu:trusty
+
 
 RUN apt-get update && apt-get install -y git python-pip
 
