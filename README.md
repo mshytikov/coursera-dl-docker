@@ -2,10 +2,10 @@
 
 For lazy people like me, who don't want to setup whole development
 environment(install pip, virtualenv, etc) on their home machine,
-but want to backup coursera materials.
+but want to backup coursera materials, with [Coursera Downloader](https://github.com/coursera-dl/coursera)
 
 You need only docker to be installed.
-(or only Vagrant, look inside Vagrant file)
+(or only [Vagrant](https://www.vagrantup.com), for more details look inside [Vagrant file](https://github.com/mshytikov/coursera-dl-docker/blob/master/Vagrantfile) )
 
 ### Usage with Docker
 
