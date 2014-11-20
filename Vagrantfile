@@ -6,7 +6,7 @@
 # 0. Run once:
 #   vagrant up --provision-with shell
 #
-# 1. Put your  coursera-dl arguments in line 33
+# 1. Put your  coursera-dl arguments in line 34
 #
 # 3. Run:
 #   vagrant provision --provision-with docker
@@ -21,7 +21,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/trusty64"
 
   # update box to be able to install docker
-  # comment line below on after first setup
   config.vm.provision "shell", inline: "sudo apt-get update"
 
   config.vm.provision "docker" do |d|
@@ -30,6 +29,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     d.run "mshytikov/coursera-dl-docker",
       args:"-v /vagrant:/downloads",
+      
+      # Put your coursera-dl arguments here
       cmd: '-u YOUR_COURSERA_EMAIL -p PASSWORD hwswinterface-002'
   end
 end
