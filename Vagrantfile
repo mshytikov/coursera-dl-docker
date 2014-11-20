@@ -6,7 +6,7 @@
 # 0. Run once:
 #   vagrant up --provision-with shell
 #
-# 1. Put your  coursera-dl arguments in line 26
+# 1. Put your  coursera-dl arguments in line 33
 #
 # 3. Run:
 #   vagrant provision --provision-with docker
