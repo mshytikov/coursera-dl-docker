@@ -6,19 +6,13 @@
 #
 
 # Pull base image
-FROM ubuntu:trusty
+FROM python:2.7-slim
 
-
-RUN apt-get update && apt-get install -y git python-pip
-
-#RUN pip install coursera
+#RUN pip install coursera-dl
 ###############################################################################
 # This block will be removed after coursera will be published on PyPi
 
-# RUN git clone https://github.com/coursera-dl/coursera.git
-RUN git clone -b add-setup https://github.com/mshytikov/coursera.git
-WORKDIR /coursera
-RUN python setup.py build sdist && pip install dist/coursera-dl-*.tar.gz
+RUN pip install https://github.com/mshytikov/coursera/archive/add-setup.tar.gz#egg=coursera-dl-0.0.1
 ###############################################################################
 
 VOLUME /downloads
