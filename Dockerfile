@@ -8,12 +8,7 @@
 # Pull base image
 FROM python:2.7-slim
 
-#RUN pip install coursera-dl
-###############################################################################
-# This block will be removed after coursera will be published on PyPi
-
-RUN pip install https://github.com/mshytikov/coursera/archive/add-setup.tar.gz#egg=coursera-dl-0.0.1
-###############################################################################
+RUN pip install coursera
 
 VOLUME /downloads
 

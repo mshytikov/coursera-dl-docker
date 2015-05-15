@@ -29,7 +29,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     d.run "mshytikov/coursera-dl-docker",
       args:"-v /vagrant:/downloads",
-      
+
       # Put your coursera-dl arguments here
       cmd: '-u YOUR_COURSERA_EMAIL -p PASSWORD hwswinterface-002'
   end
