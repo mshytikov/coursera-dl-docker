@@ -6,9 +6,9 @@
 #
 
 # Pull base image
-FROM python:2.7-slim
+FROM python:3.6-slim
 
-RUN pip install coursera
+RUN pip install coursera-dl==0.10.0
 
 VOLUME /downloads
 
